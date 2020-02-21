@@ -1,0 +1,21 @@
+
+<style>
+  table, td {border: 1px solid black}
+</style>
+
+<h1><%= @user.name %></h1>
+
+<% @user.posts.each do |p| %>
+  <div>
+    <table>
+      <tr>
+        <td>Title: </td>
+        <td><%= p.title %></td>
+      </tr> 
+      <tr>
+        <td>Content: </td>
+        <td><%= p.content %></td>
+      </tr>
+    </table>
+  </div>
+<% end %>  

@@ -1,0 +1,14 @@
+<h1><%= @topic.title %> Info</h1>
+
+<ul>
+  <% @topic.posts.each do |p| %>
+    <li>
+      <a href='/users/<%= p.user_id %>'>
+        <%= p.title %>
+        <%#Scroll to post%>
+      </a>  
+    </li>
+  <% end %>  
+</ul>
+
+

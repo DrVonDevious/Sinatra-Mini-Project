@@ -1,0 +1,25 @@
+<h1>Create A New Post</h1>
+
+<form action='/users/<%= @user.id %>', method='post'>
+
+  <label>Title: </label>
+  <input type='text', name='user[posts][title]'>
+
+  <br>
+
+  <label>Content</label>
+  <input type='text', name='user[posts][content]'>
+
+  <br>
+
+  <label>Topics: </label>
+  <select name='post[topic_id]'>
+    <% @topics.each do |t| %>
+      <option value='<%= t.id %>'><%= t.title %></option>
+    <% end %>  
+  </select>
+
+  <label>New Topic: </label>
+  <input type='text', name='topic[title]'>
+
+</form>  
